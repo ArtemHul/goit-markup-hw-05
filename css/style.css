@@ -465,7 +465,17 @@ h1, h2, h3, h4, h5, h6, p {
     z-index: 999;
     width: 100%;
     height: 100%;
-    background-color:rgba(46, 47, 66, 0.40) ;}
+    background-color:rgba(46, 47, 66, 0.40) ;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms linear, visibility 250ms linear;}
+
+.backdrop.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
     /* <======MODAL WINDOW=======> */
 
@@ -475,8 +485,124 @@ h1, h2, h3, h4, h5, h6, p {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 408px;
-        height: 584px;
+        min-height: 584px;
         background-color: #FCFCFC;
         border-radius: 4px;
+        padding: 72px 24px;
+        }
 
+    .modal-close-btn{
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        stroke: #2E2F42;
+        line-height: 0;
+        border-radius: 50%;
+        transition: stroke 250ms linear;
     }
+
+    .modal-close-btn:hover,
+    .modal-close-btn:focus{
+        stroke: #404BBF;
+    }
+
+    .rewiew-form-field-wrapper{
+        margin-bottom: 8px;
+    }
+
+.rewiew-form-description{
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #2E2F42;
+margin-bottom: 16px;
+}
+
+.rewiew-form-field-label{
+    display: block;
+    color:#8E8F99;
+font-family: Roboto;
+font-size: 12px;
+font-weight: 400;
+line-height: 1.16; /* 116.667% */
+letter-spacing: 0.1em;
+margin-bottom: 4px;
+}
+
+.rewiew-form-input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 38px;
+    transition: border-color 250ms linear;
+    outline: 0px solid transparent;
+}
+
+.rewiew-form-input:focus{
+    border-color: #4D5AE5;
+}
+
+.rewiew-form-input-wrapper{
+    position: relative;
+}
+.rewiew-form-input:focus + .rewiew-form-input-icon{
+    fill: #4D5AE5;
+    stroke: #4D5AE5;
+}
+
+
+.rewiew-form-input-icon{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: fill 250ms linear, stroke 250ms linear;
+}
+
+.rewiew-form-comment{
+font-family: Roboto;
+font-size: 12px;
+font-weight: 400;
+line-height: 1.16; /* 116.667% */
+letter-spacing: 0.04em;
+color:rgba(46, 47, 66, 0.40);
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+border: 1px solid rgba(46, 47, 66, 0.40);
+background-color: transparent;
+padding: 8px 16px;
+resize: none;
+transition: border-color 250ms linear;
+outline: 0px solid transparent;
+}
+
+.rewiew-form-comment::placeholder{
+    color:rgba(46, 47, 66, 0.40);
+}
+
+.rewiew-form-comment:focus{
+    border-color: #4D5AE5;
+}
+
+.rewiew-form-own-checkbox{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 16px;
+height: 16px;
+border: 1px solid rgba(46, 47, 66, 0.40);
+border-radius: 4px;
+cursor: pointer;}
+
+.rewiew-form-checkbox:checked 
++ .rewiew-form-chackbox-label 
+> .rewiew-form-own-checkbox{
+    background-color: #404BBF;
+}
