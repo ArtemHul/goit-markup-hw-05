@@ -521,7 +521,10 @@ margin-left: 16px;}
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms linear, visibility 250ms linear;}
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+     0px 1px 3px rgba(0, 0, 0, 0.12),
+     0px 2px 1px rgba(0, 0, 0, 0.2);}
 
 .backdrop.is-open{
     opacity: 1;
@@ -541,6 +544,8 @@ margin-left: 16px;}
         background-color: #FCFCFC;
         border-radius: 4px;
         padding: 72px 24px 24px 24px;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
         }
 
     .modal-close-btn{
@@ -550,16 +555,16 @@ margin-left: 16px;}
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: 32px;
-        right: 32px;
+        top: 24px;
+        right: 24px;
         padding: 0;
         background-color: #E7E9FC;
         border: 1px solid rgba(0, 0, 0, 0.10);
         fill: #2E2F42;
         line-height: 0;
         border-radius: 50%;
-        transition: background-color 250ms linear,
-         border 250ms linear, stroke 250ms linear;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .modal-close-btn:hover,
