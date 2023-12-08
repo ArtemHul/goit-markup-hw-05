@@ -624,7 +624,7 @@ margin-right: 8px;}
 .rewiew-form-checkbox:focus 
 + .rewiew-form-chackbox-label 
 > .rewiew-form-own-checkbox{
-    outline: 2px solid #404BBF;
+    outline: 1px solid #404BBF;
 }
 
 .rewiew-form-own-checkbox-icon{
