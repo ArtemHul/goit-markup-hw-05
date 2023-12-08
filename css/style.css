@@ -492,21 +492,29 @@ h1, h2, h3, h4, h5, h6, p {
         }
 
     .modal-close-btn{
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         top: 32px;
         right: 32px;
         padding: 0;
-        background-color: transparent;
-        border: none;
-        stroke: #2E2F42;
+        background-color: #E7E9FC;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        fill: #2E2F42;
         line-height: 0;
         border-radius: 50%;
-        transition: stroke 250ms linear;
+        transition: background-color 250ms linear,
+         border 250ms linear, stroke 250ms linear;
     }
 
     .modal-close-btn:hover,
     .modal-close-btn:focus{
-        stroke: #404BBF;
+        background-color: #404BBF;
+        border: none;
+        fill: #FFFFFF;
     }
 
     .rewiew-form-field-wrapper{
